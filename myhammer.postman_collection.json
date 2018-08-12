@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "81d3cba8-6d68-4083-9c22-1df2a96906e6",
+		"name": "myhammer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "myhammer/api/city?zip=30042",
+					"host": [
+						"myhammer"
+					],
+					"path": [
+						"api",
+						"city"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "30042"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "myhammer/api/categories?parent_id=",
+					"host": [
+						"myhammer"
+					],
+					"path": [
+						"api",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "parent_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get execution dates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "myhammer/api/execution_dates",
+					"host": [
+						"myhammer"
+					],
+					"path": [
+						"api",
+						"execution_dates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "city_id",
+							"value": "1",
+							"sessionValue": "1",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "testtest",
+							"sessionValue": "test",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"sessionValue": "1",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "desc",
+							"sessionValue": "desc",
+							"type": "text"
+						},
+						{
+							"key": "execution_date_id",
+							"value": "1",
+							"sessionValue": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "myhammer/api/jobs/create",
+					"host": [
+						"myhammer"
+					],
+					"path": [
+						"api",
+						"jobs",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
